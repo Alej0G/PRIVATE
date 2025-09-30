@@ -135,15 +135,40 @@
     @keyframes blink {
       50% { opacity: 0; }
     }
+/* --- Responsive design --- */
+@media (max-width: 768px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px; /* más espacio vertical */
+  }
 
-    @media (max-width: 600px) {
-      .progress-container { width: 90%; height: 30px; }
-      .dot { width: 4px; height: 4px; margin: 0 1px; }
-      .walker { font-size: 1.5rem; }
-      .flag { font-size: 1.5rem; }
-      h1 { font-size: 1.5rem; }
-      .coming-soon { font-size: 0.8rem; }
-    }
+  h1 {
+    text-align: center;
+    margin: 10px 0 25px 0; /* abajo 25px de aire */
+    margin-bottom: 50px;
+    letter-spacing: 3px;
+    line-height: 41px;
+  }
+
+  h2, p {
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .cargando {
+    margin-top: 30px; /* bajá la línea/emojis */
+  }
+
+  img {
+    max-width: 90%;
+    height: auto;
+  }
+}
+
   </style>
 </head>
 <body>
