@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alejandro 2026</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Press Start 2P', cursive;
+      background: #f4f4f4; /* fondo sobrio */
+      color: #333333; /* gris oscuro */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      position: relative;
+      align-items: center;
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+
+    /* ====== FONDO MATEMÁTICO ====== */
+    .background-math {
+      position: absolute;
+      top: 0; left: 28px; right: 0; bottom: 0;
+      font-size: 2rem;
+      color: rgba(50, 50, 50, 0.15);
+      white-space: pre-wrap;
+      pointer-events: none;
+      z-index: 0;
+      line-height: 2.5rem;
+      user-select: none;
+      text-align: left;
+      overflow: hidden;
+      animation: scrollUp 5s linear infinite;
+    }
+
+    .background-math-content {
+      animation: scrollMath 11s linear infinite;
+    }
+
+    @keyframes scrollMath {
+      from { transform: translateY(0); }
+      to { transform: translateY(-50%); }
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 50px;
+      text-shadow: 1px 1px 3px #555555;
+      z-index: 1;
+      position: relative;
+    }
+
+    h1 .word {
+      display: inline-block;
+      background: linear-gradient(90deg, #111111, #aaaaaa, #111111);
+      background-size: 300% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shine 3s linear infinite;
+    }
+    h1 .word:nth-child(1) { animation-delay: 0s; }
+    h1 .word:nth-child(2) { animation-delay: 0.8s; }
+
+    @keyframes shine {
+      0% { background-position: -300% center; }
+      100% { background-position: 300% center; }
+    }
+
+    /* ====== PROGRESS BAR ====== */
+    .progress-container {
+      position: relative;
+      width: 80%;
+      max-width: 600px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 1;
+    }
+    .dot {
+      background-color: #555555; /* gris sobrio */
+      border-radius: 50%;
+      width: 6px;
+      height: 6px;
+      display: inline-block;
+      margin: 0 2px;
+      animation: flicker 1.5s infinite alternate;
+    }
+    @keyframes flicker {
+      from { opacity: 0.4; }
+      to { opacity: 1; }
+    }
+
+    .walker {
+      position: absolute;
+      top: -20px;
+      font-size: 2rem;
+      animation: walk 6s linear infinite, bounce 0.6s ease-in-out infinite;
+      text-shadow: 1px 1px 2px #aaa;
+    }
+    @keyframes walk {
+      0% { left: 0%; }
+      100% { left: 88%; }
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    .flag {
+      font-size: 2rem;
+      animation: wave 1s infinite alternate;
+      color: #333333;
+    }
+    @keyframes wave {
+      0% { transform: rotate(0deg); }
+      50% { transform: rotate(15deg); }
+      100% { transform: rotate(-15deg); }
+    }
+
+    .coming-soon {
+      margin-top: 40px;
+      font-size: 0.9rem;
+      color: #333333;
+      text-shadow: 1px 1px 2px #aaa;
+      animation: blink 1s step-start infinite;
+      z-index: 1;
+    }
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+
+    @media (max-width: 600px) {
+      .progress-container { width: 90%; height: 30px; }
+      .dot { width: 4px; height: 4px; margin: 0 1px; }
+      .walker { font-size: 1.5rem; }
+      .flag { font-size: 1.5rem; }
+      h1 { font-size: 1.5rem; }
+      .coming-soon { font-size: 0.8rem; }
+    }
+  </style>
+</head>
+<body>
+  <!-- FONDO MATEMÁTICO -->
+  <div class="background-math">
+    <div class="background-math-content">
+      ∑ ∫ π √ ∆ ≈ ∞   e^{iπ} + 1 = 0   lim → ∞ f(x)   P(A ∩ B) = P(A)·P(B|A) <br>
+      ∑ ∫ π √ ∆ ≈ ∞   e^{iπ} + 1 = 0   lim → ∞ f(x)   P(A ∩ B) = P(A)·P(B|A) <br>
+      ∑ ∫ π √ ∆ ≈ ∞   e^{iπ} + 1 = 0   lim → ∞ f(x)   P(A ∩ B) = P(A)·P(B|A) <br>
+      ∑ ∫ π √ ∆ ≈ ∞   e^{iπ} + 1 = 0   lim → ∞ f(x)   P(A ∩ B) = P(A)·P(B|A) <br>
+      ∑ ∫ π √ ∆ ≈ ∞   e^{iπ} + 1 = 0   lim → ∞ f(x)   P(A ∩ B) = P(A)·P(B|A) <br>
+      ∑ ∫ π √ ∆ ≈ ∞   e^{iπ} + 1 = 0   lim → ∞ f(x)   P(A ∩ B) = P(A)·P(B|A) <br>
+      ∑ ∫ π √ ∆ ≈ ∞   e^{iπ} + 1 = 0   lim → ∞ f(x)   P(A ∩ B) = P(A)·P(B|A) <br>
+      ∑ ∫ π √ ∆ ≈ ∞   e^{iπ} + 1 = 0   lim → ∞ f(x)   P(A ∩ B) = P(A)·P(B|A) <br>
+      ∑ ∫ π √ ∆ ≈ ∞   e^{iπ} + 1 = 0   lim → ∞ f(x)   P(A ∩ B) = P(A)·P(B|A) <br>
+      ∑ ∫ π √ ∆ ≈ ∞   e^{iπ} + 1 = 0   lim → ∞ f(x)   P(A ∩ B) = P(A)·P(B|A) <br>
+      ∑ ∫ π √ ∆ ≈ ∞   e^{iπ} + 1 = 0   lim → ∞ f(x)   P(A ∩ B) = P(A)·P(B|A) <br>
+      ∑ ∫ π √ ∆ ≈ ∞   e^{iπ} + 1 = 0   lim → ∞ f(x)   P(A ∩ B) = P(A)·P(B|A) <br>
+      ∑ ∫ π √ ∆ ≈ ∞   e^{iπ} + 1 = 0   lim → ∞ f(x)   P(A ∩ B) = P(A)·P(B|A) <br>
+      ∑ ∫ π √ ∆ ≈ ∞   e^{iπ} + 1 = 0   lim → ∞ f(x)   P(A ∩ B) = P(A)·P(B|A) <br>
+      ∑ ∫ π √ ∆ ≈ ∞   e^{iπ} + 1 = 0   lim → ∞ f(x)   P(A ∩ B) = P(A)·P(B|A) <br>
+      ∑ ∫ π √ ∆ ≈ ∞   e^{iπ} + 1 = 0   lim → ∞ f(x)   P(A ∩ B) = P(A)·P(B|A) <br>
+      ∑ ∫ π √ ∆ ≈ ∞   e^{iπ} + 1 = 0   lim → ∞ f(x)   P(A ∩ B) = P(A)·P(B|A) <br>
+      ∑ ∫ π √ ∆ ≈ ∞   e^{iπ} + 1 = 0   lim → ∞ f(x)   P(A ∩ B) = P(A)·P(B|A) <br>
+      ∑ ∫ π √ ∆ ≈ ∞   e^{iπ} + 1 = 0   lim → ∞ f(x)   P(A ∩ B) = P(A)·P(B|A) <br>
+      ∑ ∫ π √ ∆ ≈ ∞   e^{iπ} + 1 = 0   lim → ∞ f(x)   P(A ∩ B) = P(A)·P(B|A) <br>
+      ∑ ∫ π √ ∆ ≈ ∞   e^{iπ} + 1 = 0   lim → ∞ f(x)   P(A ∩ B) = P(A)·P(B|A)
+    </div>
+  </div>
+
+  <!-- TÍTULO -->
+  <h1>
+    <span class="word">Alejo Ospina</span> <span class="word">2026</span>
+  </h1>
+
+  <!-- PROGRESO -->
+  <div class="progress-container">
+    <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+    <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+    <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+    <span class="dot"></span>
+    <div class="walker" id="walker">🏃‍➡️</div>
+    <div class="flag">🔒</div>
+  </div>
+
+  <!-- COMING SOON -->
+  <p class="coming-soon">Coming soon...</p>
+
+  <script>
+    const walker = document.getElementById('walker');
+    const emojis = ['🏃‍➡️', '💰', '📊', '👤'];
+    let index = 0;  
+
+    setInterval(() => {
+      index = (index + 1) % emojis.length;
+      walker.textContent = emojis[index];
+    }, 700);
+  </script>
+</body>
+</html>
